@@ -1,0 +1,290 @@
+/*Variables CSS (Consistencia Visual)*/
+:root {
+    --color-primario: #3b8bc2;   /*(Color Titulo)*/  
+    --color-hover: #2a6a99;      /*(Color Seleccion)*/ 
+    --color-fondo: #eef2f5;      /*(Color Fondo)*/ 
+    --color-cajas: #f8f9fa;      /*(Color Cajas)*/ 
+    --fuente-principal: Arial, sans-serif;   /*(Fuente)*/ 
+}
+
+/* Estilos generales */
+body {
+    font-family: var(--fuente-principal);   /*(Llamado de Fuente)*/ 
+    margin: 0;                              /*(Margenes Externos)*/ 
+    background-color: var(--color-fondo);   /*(Llamado de Color Fondo)*/ 
+}
+
+/******INDEX.HTML******/
+
+/* Aspecto del Encabezado */
+.header {
+    background-color: var(--color-primario);    /*(Llamado de Color Titulo)*/
+    padding: 20px 40px;                         /*(Margenes Internos)*/
+    color: white;
+}
+
+/* Aspecto del Nav */
+.nav {     
+    gap: 15px;          /*(Espaciado entre Nav)*/
+    margin-top: 25px;   /*(Margen Superior)*/
+}
+
+/* Interactividad Nav 1 */
+.nav a {
+    text-decoration: none;      /*(Elimina Subrayado)*/
+    color: white;             /*(Color de Fuente)*/
+    font-weight: bold;          /*(Grosor de Fuente)*/
+    padding: 10px 10px;         /*(Ancho de Seleccion)*/
+    border-radius: 4px;         /*(Redondeo de Seleccion)*/
+    transition: background-color 0.4s;      /*(Tiempo de Seleccion)*/
+}
+
+/* Interactividad Nav 2 (Color) */
+.nav a:hover {
+    background-color: var(--color-hover);   /*(Llamado de Color de Seleccion)*/
+    color: white;                         /*(Fuente de Seleccion)*/
+}
+
+/* Grid para las estadísticas */
+.stats-container {
+    display: grid;                          /*(Crea Cuadriculas)*/
+    grid-template-columns: repeat(3, 1fr);  /*(Numero y Tamaño de Columnas)*/
+    gap: 15px;                              /*(Separacion de Columnas)*/
+}
+
+/* Aspecto de las Cuadriculas 1 */
+.stat-card {
+    background-color: white;        /*(Color de Cuadriculas)*/
+    border: 1px solid #ccc;         /*(Grosor y Color de Borde de Cuadriculas)*/
+    padding: 20px;                    /*(Margenes Internos)*/
+    text-align: center;               /*(Alineacion de Texto)*/
+    transition: transform 0.2s;       /*(Tiempo de Seleccion)*/
+}
+
+/* Aspecto de las Cuadriculas 2 (Cuadriculas Internas) */
+.stat-card h3 {
+    font-size: 32px;                    /*(Tamaño de Fuente)*/
+    color: var(--color-primario);       /*(Llamado de Color Titulo)*/
+    margin: 0;                          /*(Margenes Externos)*/
+}
+
+/* Interactividad en las Cuadriculas */
+.stat-card:hover {
+    transform: translateY(-5px);      /*(Animacion de Seleccion)*/
+}
+
+/* Estilos de la Lista*/
+.news-list {
+    list-style: none;       /*(Elimina Estilo de la Lista)*/
+    padding: 0;             /*(Margenes Internos)*/
+}
+
+/* Aspecto de la Lista */
+.news-list li {
+    padding: 12px;          /*(Espaciado de la lista)*/ 
+    font-size: 14px;        /*(Tamaño de Fuente)*/
+}
+
+/* Grid para la estructura de las Cajas de Informacion */
+.container {
+    max-width: 1000px;              /*(Tamaño de Cajas de Informacion)*/
+    margin: 30px auto 80px auto;    /*(Margenes Externos)*/
+    display: grid;                  /*(Crea Cuadriculas)*/
+    grid-template-columns: 1fr;     /*(Numero y Tamaño de Columnas)*/
+    gap: 20px;                      /*(Espaciado entre las Cajas de Información)*/
+    padding: 20px;                  /*(Margenes Internos)*/
+}
+
+/* Aspecto de las Cajas de Informacion 1 */
+.info-box {
+    background-color: var(--color-cajas);     /*(Llamado a Color Cajas)*/
+    border: 1px solid #ccc;                 /*(Ancho de Borde de Caja de Informacion)*/
+    padding: 20px;                            /*(Margenes Internos)*/
+}
+
+/* Aspecto de las Cajas de Informacion 2 (Resumen) */
+.titulo-seccion {
+    color: var(--color-primario);                    /*(Llamado de Color Titulo)*/
+    margin-top: 0;                                   /*(Elimina Margen Superior)*/
+    border-bottom: 2px solid var(--color-primario);  /*(Color y Grosor de Lineas separadoras)*/
+    padding-bottom: 10px;                            /*(Espaciado de Lineas Separadoras)*/
+}
+
+/******PROYECTOS.HTML******/
+
+/* Barra de Filtros */
+.filtros-bar {
+    background-color: var(--color-cajas);   /*(Llamado a Color Cajas)*/
+    padding: 15px;                          /*(Margenes Internos)*/
+    border: 1px solid #ccc;               /*(Grosor y Color de Borde de Cuadricula)*/
+    display: flex;                          /*(Rellena de forma Horizontal)*/
+    gap: 20px;                              /*(Espaciado entre Filtros)*/
+    margin-bottom: 25px;                    /*(Margen Exterior inferior)*/
+    border-radius: 4px;                     /*(Redondeo de Cuadricula)*/
+}
+
+/* Aspecto de Filtros 1 */
+.filtro {               
+    align-items: center;            /*(Alineacion de Texto)*/
+    gap: 10px;                      /*(Espaciado entre Filtros)*/
+}
+
+/* Aspecto de Filtros 2 (Cuadros Internos) */
+.filtro select {
+    padding: 5px;                           /*(Margenes Internos)*/
+    border: 1px solid #ccc;               /*(Grosor y Color de Borde de Cuadricula Interna)*/
+    border-radius: 4px;                     /*(Redondeo de Cuadricula Interna)*/
+    font-family: var(--fuente-principal);   /*(Llamado a Fuente)*/
+}
+
+/* Grid para la Estructura de las Tarjetas Proyectos */
+.proyectos-grid {
+    display: grid;                          /*(Crea Cuadriculas)*/
+    grid-template-columns: repeat(2, 1fr);  /*(Numero y Tamaño de Columnas)*/
+    gap: 20px;                              /*(Espaciado entre las Tarjetas Proyectos)*/
+}
+
+/* Aspecto de Tarjetas Proyectos 1 */
+.proyecto-card {
+    background-color: var(--color-cajas);       /*(Llamado a Color Cajas)*/
+    border: 1px solid #ccc;                   /*(Grosor y Color de Borde de Cuadricula)*/
+    border-radius: 8px;                         /*(Redondeo de Cuadricula)*/
+    overflow: hidden;                           /*(Corta la imagen para que respete los bordes redondeados)*/
+    display: flex;                              /*(Rellena de forma Horizontal)*/
+    flex-direction: column;                     /*(Ordena de forma Vertical)*/
+    transition: transform 0.2s;                 /*(Tiempo de Seleccion)*/
+}
+
+/* Aspecto de Tarjetas Proyectos 2 (Imagen) */
+.proyecto-img {
+    width: 100%;                    /*(Ancho de Fondo de Imagen)*/
+    height: 175px;                  /*(Alto de Fondo de Imagen)*/
+    object-fit: cover;              /*(La Imagen no se Deforma)*/
+    background-color: #ddd;       /*(Color de Fondo de Imagen)*/
+}
+
+/* Aspecto de Tarjetas Proyectos 3 (Boton Detalle 1) */
+.proyecto-contenido {
+    padding: 15px;                  /*(Margenes Internos)*/
+    display: flex;                  /*(Rellena de forma Horizontal)*/
+    flex-direction: column;         /*(Ordena de forma Vertical)*/
+    flex-grow: 1;                   /*(El botón estara siempre abajo)*/
+}
+
+/* Aspecto de Tarjetas Proyectos 4 (Boton Detalle 2) */
+.btn-detalle {
+    margin-top: auto;                           /*(Empuja el Botón al Fondo de la tarjeta)*/
+    background-color: var(--color-primario);    /*(Llamado a Color Titulo)*/
+    color: white;                             /*(Color de Fuente)*/
+    text-align: center;                         /*(Alineacion de Texto)*/
+    text-decoration: none;                      /*(Elimina Subrayado)*/
+    padding: 8px;                               /*(Ancho de Boton)*/
+    border-radius: 4px;                         /*(Redondeo de Boton)*/
+    font-weight: bold;                          /*(Grosor de Fuente)*/
+    transition: background-color 0.3s;          /*(Tiempo de Seleccion)*/
+}
+
+/* Aspecto de Tarjetas Proyectos 5 (Boton Detalle 3) */ 
+.btn-detalle:hover {
+    background-color: var(--color-hover);       /*(Llamado de Color Seleccion)*/
+}
+
+/* Aspecto de Tarjetas Proyectos 6 (Etiqueta) */
+.etiqueta {
+    background-color: var(--color-primario);    /*(Llamado a Color Titulo)*/
+    color: white;                             /*(Color de Fuente)*/
+    padding: 4px 8px;                           /*(Margenes Internos)*/
+    font-size: 12px;                            /*(Tamaño de Fuente)*/
+    border-radius: 12px;                        /*(Redondeo de Cuadricula)*/
+    align-self: flex-start;                     /*(No Ocupa todo el Ancho)*/
+    margin-bottom: 10px;                        /*(Margen Exterior inferior)*/
+}
+
+/* Interactividad de Tarjetas Proyectos */
+.proyecto-card:hover {
+    transform: translateY(-5px);                /*(Animacion de Seleccion)*/ 
+}
+
+/* Aspecto de Descripcion 1 */
+.proyecto-contenido h3 {
+    margin: 0 0 10px 0;                 /*(Margenes Internos)*/
+    color: var(--color-primario);       /*(Llamado de Color Titulo)*/
+}
+
+ /* Aspecto de Descripcion 2 (Parrafo) */
+.proyecto-contenido p {
+    font-size: 14px;            /*(Tamaño de Fuente)*/
+    margin-bottom: 20px;        /*(Margen Exterior inferior)*/
+}
+
+/******DETALLE.HTML******/
+
+/* Aspecto de Recursos */
+.recursos-lista a {
+    color: var(--color-primario);       /*(Llamado a Color Titulo)*/
+    text-decoration: none;              /*(Elimina Subrayado)*/
+    font-weight: bold;                  /*(Grosor de Fuente)*/
+}
+
+/* Interactividad de Recursos */
+.recursos-lista a:hover {
+    text-decoration: underline;         /*(Subrayado de Fuente)*/
+    color: var(--color-hover);          /*(Llamado de Color Seleccion)*/
+}
+
+/* Aspecto de Pie de Pagina */
+.footer {
+    background-color: var(--color-primario);  /*(Llamado a Color Titulo)*/
+    text-align: center;                       /*(Alineacion de Texto)*/
+    padding: 15px;                            /*(Margenes Internos)*/
+    position: fixed;                          /*(El Pie de Pagina sigue la vista)*/
+    bottom: 0;                                /*(Baja completamente)*/
+    width: 100%;                              /*(Ocupa todo el ancho de pantalla)*/
+}
+
+/******PERFIL.HTML******/
+
+/* Grid para la Estructura de los Perfiles */
+.perfiles-grid {
+    display: grid;                           /*(Crea Cuadriculas)*/
+    grid-template-columns: repeat(2, 1fr);   /*(Numero y Tamaño de Columnas)*/
+    gap: 30px;                               /*(Espacio entre los perfiles)*/
+    margin-top: 20px;                        /*(Margen Superior)*/
+}
+
+/* Aspecto de los Perfiles 1 */
+.perfil-card {
+    background-color: var(--color-cajas);     /*(Llamado a Color Cajas)*/
+    border: 1px solid #ccc;                 /*(Grosor y Color de Borde de Cuadricula)*/
+    border-radius: 8px;                       /*(Redondeo de Cuadricula)*/
+    padding: 30px 20px;                       /*(Margenes Internos)*/
+    text-align: center;                       /*(Alineacion de Texto)*/
+}
+
+/* Aspecto de los Perfiles 2 (Marco) */
+.perfil-img {   
+    width: 150px;                                /*(Ancho de Marco de Foto)*/
+    height: 150px;                               /*(Alto de Marco de Foto)*/
+    border-radius: 50%;                          /*(Hace el Marco Circular)*/
+    object-fit: cover;                           /*(La Foto no se Deforma)*/
+    margin-bottom: 15px;                         /*(Margen inferior del Circulo)*/
+    border: 4px solid var(--color-primario);     /*(Grosor del Circulo y Llamado a Color Titulo)*/
+}
+
+/* Aspecto de los Perfiles 3 (Etiqueta) */
+.rol-etiqueta {
+    display: inline-block;                      /*(No Ocupa todo el Ancho)*/
+    padding: 5px 15px;                          /*(Margenes Internos)*/
+    border-radius: 20px;                        /*(Redondeo de Cuadricula)*/
+    font-weight: bold;                          /*(Grosor de Fuente)*/
+    font-size: 14px;                            /*(Tamaño de Fuente)*/
+    margin-bottom: 15px;                        /*(Margen inferior de la Etiqueta)*/
+    border: 1px solid #ddd;                   /*(Grosor y Color de Borde de Etiqueta)*/
+}
+
+/* Aspecto de Descripcion */
+.perfil-info h3 {
+    color: var(--color-primario);           /*(Llamado a Color Titulo)*/
+    margin: 10px 0 5px 0;                   /*(Margenes Internos)*/
+    font-size: 24px;                        /*(Tamaño de Fuente)*/
+}
