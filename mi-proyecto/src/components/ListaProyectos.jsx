@@ -44,10 +44,8 @@ return (
 
     <div className="buscador-proyecto">
       <input
-        type="text"
-        placeholder="Buscar proyecto"
-        value={buscarProyec}
-        onChange={(e) => setBuscarProyec(e.target.value)}
+        type="text" placeholder="Buscar proyecto"
+        value={buscarProyec} onChange={(e) => setBuscarProyec(e.target.value)}
       />
     </div>
 
@@ -57,7 +55,6 @@ return (
           <span className="proyecto-categoria">{p.categoria}</span>
 
           <h3>{p.titulo}</h3>
-
           <p>Estado: {p.estado}</p>
 
           <button className="btn-eliminar" onClick={() => eliminar(p.id)}>
@@ -69,28 +66,18 @@ return (
 
     <div className="form-agregar">
       <h3 className="titulo-seccion">Agregar Proyecto</h3>
-
       <input
-        type="text"
-        placeholder="Título"
-        value={nuevoTitulo}
-        onChange={(e) => setNuevoTitulo(e.target.value)}
+        type="text" placeholder="Título"
+        value={nuevoTitulo} onChange={(e) => setNuevoTitulo(e.target.value)}
       />
-
       <input
-        type="text"
-        placeholder="Categoría"
-        value={nuevaCategoria}
-        onChange={(e) => setNuevaCategoria(e.target.value)}
+        type="text" placeholder="Categoría"
+        value={nuevaCategoria} onChange={(e) => setNuevaCategoria(e.target.value)}
       />
-
       <input
-        type="text"
-        placeholder="Estado"
-        value={nuevoEstado}
-        onChange={(e) => setNuevoEstado(e.target.value)}
+        type="text" placeholder="Estado"
+        value={nuevoEstado} onChange={(e) => setNuevoEstado(e.target.value)}
       />
-
       <button className="btn-agregar" onClick={agregar}>
         Agregar
       </button>
