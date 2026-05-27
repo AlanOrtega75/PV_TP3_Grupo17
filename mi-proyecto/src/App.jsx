@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header />
-      <main>
+      <main className="main-container">
         <ListaProyectos />
       </main>
       <Footer />
